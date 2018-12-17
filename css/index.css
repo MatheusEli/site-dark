@@ -1,0 +1,358 @@
+
+body{
+    
+    background: url("../img/FUNDO.jpg") fixed no-repeat;
+    background-size: 100%;
+    background-position: top;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.principal{
+
+    color: #FFF;
+
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4em;
+
+}
+
+.principal h1 a{
+
+    
+    text-decoration: none;
+    color: #FFF;
+}
+.principal h1{
+
+    padding-top: 0.5em;
+    letter-spacing: 0.5em;
+}
+
+.subtitulo-principal{
+
+    letter-spacing: 0.5em;
+    text-align: center;
+    font-size: 0.3em;
+    margin: 0.2em;
+    padding-right: 0.8em;
+}
+
+header{
+
+    position: relative;
+}
+
+.menu-principal{
+
+    padding: 0;
+}
+.menu-principal li{
+
+    text-transform: uppercase;
+    margin-right: 5em;
+    font-size: 0.3em;
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu-principal li:last-child{
+
+    margin-right: 0;
+}
+
+.menu-principal li a:hover, .menu-principal li a:focus{
+
+    color: #FFF;
+
+}
+.menu-principal a{
+
+    text-decoration: none;
+    color: gray;
+}
+
+.icones-redes-sociais li {
+	display: inline-block;
+}
+
+.icones-redes-sociais a{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+
+}
+
+.facebook{
+
+    background-image: url(../img/facebook.png);
+}
+
+.twitter{
+
+    background-image: url(../img/twitter.png);
+}
+
+.instagram{
+
+    background-image: url(../img/instagram.png);
+}
+
+.icones-redes-sociais{
+
+    position: absolute;
+    top: .2em;
+    right: 0;
+}
+
+.container{
+
+    width: 940px;
+    margin: 0 auto;
+}
+
+.main .noticias{
+
+    margin-top: 20px;
+}
+.main .sobre{
+
+    margin: 20px auto;
+    background-color: #F2F2F2;
+    box-shadow: 0 5px 15px black;
+}
+
+.noticias{
+
+    overflow: hidden;
+    height: 435px;
+}
+
+.menu-noticias{
+
+    float: right;
+    padding: 1em;
+    font-size: .9em;
+    box-sizing: border-box;
+    margin-left: 1%; 
+    width: 29%;
+    height: inherit;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: rgba(38,12,12,.3);
+
+
+}
+
+.menu-noticias li{
+
+    padding: .65em 0;
+    background-image: linear-gradient(to right, 
+        gray, 
+        gray, 
+        gray
+    );
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    /* trocamos "bottom center" por "top center" */
+    background-position: bottom center;
+    
+}
+
+.menu-noticias li:last-child{
+    text-align: right;
+    padding-bottom: 0;
+    background-image: none;
+}
+
+.menu-noticias li a{
+
+    color: lightgray;
+    text-decoration: none;
+    
+}
+
+.menu-noticias li a:hover, .menu-noticias li a:focus{
+
+    color: #FFF;
+    text-shadow: 0 0 .1em #FA9;
+}
+
+.noticia-principal{
+
+    overflow: hidden;
+    width: 70%;
+    position: relative;
+}
+.noticia-principal h2{
+
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    padding: 0 2em;
+    z-index: 2;
+    transition: all 0.5s ease-in;
+    color: #FFF;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0,0.2);
+    font-size: 1.7em;
+}
+.box-black {
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    background-color: #000;
+    transition: all 0.5s ease-in;
+}
+.imagem-principal img{
+
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
+   transition: 1s; 
+   max-width: 100%;
+}
+
+.noticia-principal:hover .imagem-principal img, 
+.noticia-principal:focus .imagem-principal img{   
+
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.noticia-principal:hover .box-black,
+.noticia-principal:focus .box-black{
+
+    opacity: 0.7;
+    height: 30%
+}
+
+.noticia-principal:hover h2,
+.noticia-principal:focus h2{
+
+    opacity: 1;
+    bottom: 1em;
+}
+
+.noticia-principal .imagem-principal + .imagem-principal{
+
+        display: none;
+}
+
+strong{
+
+    font-weight: bold;
+}
+.sobre h2{
+
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+
+    background-image: linear-gradient(to right, 
+        rgba(200, 200, 200, 0), 
+        rgba(200, 200, 200, 1), 
+        rgba(200, 200, 200, 0)
+    );
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    /* trocamos "bottom center" por "top center" */
+    background-position: bottom center;
+}
+
+.sobre p{
+
+    text-indent: 2em;
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: justify;
+    
+}
+
+.criadores{
+
+    float: right;
+    clear: both;
+}
+
+.Jonas{
+
+    float: left;
+    clear: both;
+}
+
+.personagens{
+
+    float: right;
+    clear: both;
+}
+
+.sobre{
+
+    padding: 10% 10%;
+}
+
+.imagem-sobre{
+
+    margin: 0 1em;
+    overflow: hidden;
+    position: relative;
+
+    border-radius: 5%;
+}
+
+.imagem-sobre figcaption{
+
+    position: absolute;
+    padding: 0 2em;
+    bottom: 1em;
+    z-index: 2;
+
+    color: #FFF;
+}
+
+.imagem-sobre img{
+
+    width: 350px;
+    transition: 1s;
+}
+.imagem-sobre:hover img{
+
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.imagem-sobre:hover .box-black{
+
+    opacity: 0.7;
+    height: 30%
+}
+
+.sobre section{
+
+    padding: 7% 0;
+    background-image: linear-gradient(to right, 
+        rgba(200, 200, 200, 0), 
+        rgba(200, 200, 200, 1), 
+        rgba(200, 200, 200, 0)
+    );
+    background-size: 100% 0.3%;
+    background-repeat: no-repeat;
+    /* trocamos "bottom center" por "top center" */
+    background-position: bottom center;
+}
+.rodape-pagina{
+
+    color: #FFF;
+    padding: 3em;
+    clear: both;
+}
