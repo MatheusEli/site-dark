@@ -184,6 +184,7 @@ header{
 
     overflow: hidden;
     width: 70%;
+    height: 100%;
     position: relative;
 }
 .noticia-principal h2{
@@ -209,16 +210,75 @@ header{
     background-color: #000;
     transition: all 0.5s ease-in;
 }
-.imagem-principal img{
+.slider{
 
-    -moz-transition: 1s;
-    -webkit-transition: 1s;
-   transition: 1s; 
-   max-width: 100%;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
 }
 
-.noticia-principal:hover .imagem-principal img, 
-.noticia-principal:focus .imagem-principal img{   
+
+.slider li {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slider input{
+
+    display: none;
+}
+
+.slider label {
+     background-color: #F2F2F2;
+     bottom: 10px;
+     cursor: pointer;
+     display: block;
+     height: 10px;
+     position: absolute;
+     width: 10px;
+     z-index: 10;
+ }
+    
+.slider li:nth-child(1) label {
+     left: 10px;
+ }
+
+ .slider li:nth-child(2) label {
+     left: 40px;
+ }
+
+
+ .slider img {
+     opacity: 0;
+     visibility: hidden;
+     margin: auto;
+     height: 100%;
+     width: 100%;
+     vertical-align: top;
+
+     -moz-transition: 1s;
+    -webkit-transition: 1s;
+    transition: 1s; 
+    max-width: 100%;
+ }
+
+ .slider li input:checked ~ img {
+     opacity: 1;
+     visibility: visible;
+     z-index: 10;
+ } 
+ 
+ .slider li input:checked ~ label {
+    
+    background-color: rgb(97, 95, 95);
+ } 
+
+
+.noticia-principal:hover .slider img,
+.noticia-principal:focus .slider img{   
 
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
@@ -232,16 +292,10 @@ header{
     height: 30%
 }
 
-.noticia-principal:hover h2,
-.noticia-principal:focus h2{
+.slider li:hover h2,.slider li:focus h2{
 
     opacity: 1;
     bottom: 1em;
-}
-
-.noticia-principal .imagem-principal + .imagem-principal{
-
-        display: none;
 }
 
 strong{
