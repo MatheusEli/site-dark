@@ -265,15 +265,23 @@ header{
     max-width: 100%;
  }
 
+ .slider figcaption{
+
+    visibility: hidden;
+ }
  .slider li input:checked ~ img {
      opacity: 1;
      visibility: visible;
-     z-index: 10;
  } 
  
  .slider li input:checked ~ label {
     
     background-color: rgb(97, 95, 95);
+ } 
+
+ .slider li input:checked ~ figcaption {
+     
+        visibility: visible;
  } 
 
 
@@ -292,7 +300,8 @@ header{
     height: 30%
 }
 
-.slider li:hover h2,.slider li:focus h2{
+.noticia-principal:hover .slider h2,
+.noticia-principal:focus .slider h2{
 
     opacity: 1;
     bottom: 1em;
