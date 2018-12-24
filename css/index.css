@@ -259,7 +259,7 @@ header{
      width: 100%;
      vertical-align: top;
 
-     -moz-transition: 1s;
+    -moz-transition: 1s;
     -webkit-transition: 1s;
     transition: 1s; 
     max-width: 100%;
