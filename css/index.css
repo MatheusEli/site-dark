@@ -19,7 +19,6 @@ body{
 }
 
 .principal h1 a{
-
     
     text-decoration: none;
     color: #FFF;
@@ -194,7 +193,9 @@ header{
     bottom: 0;
     padding: 0 2em;
     z-index: 2;
-    transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all .3s ease-in;
     color: #FFF;
     text-shadow: 1px 1px 3px rgba(0, 0, 0,0.2);
     font-size: 1.7em;
@@ -265,7 +266,7 @@ header{
     max-width: 100%;
  }
 
- .slider figcaption{
+ .slider figcaption h2{
 
     visibility: hidden;
  }
@@ -279,8 +280,12 @@ header{
     background-color: rgb(97, 95, 95);
  } 
 
- .slider li input:checked ~ figcaption {
-     
+ .slider li input:checked ~ figcaption h2{
+    
+        -moz-transition-delay: .3s;
+        -webkit-transition-delay: .3s;
+        transition-delay: .3s;
+
         visibility: visible;
  } 
 
