@@ -182,7 +182,7 @@ header{
 .noticia-principal{
 
     overflow: hidden;
-    width: 70%;
+    width: 100%;
     height: 100%;
     position: relative;
 }
@@ -233,7 +233,8 @@ header{
 }
 
 .slider label {
-     background-color: #F2F2F2;
+     background-color: rgb(97, 95, 95);
+     
      bottom: 10px;
      cursor: pointer;
      display: block;
@@ -256,9 +257,9 @@ header{
      opacity: 0;
      visibility: hidden;
      margin: auto;
-     height: 100%;
-     width: 100%;
-     vertical-align: top;
+     vertical-align: bottom;
+     position: relative;
+     bottom: 5em;
 
     -moz-transition: 1s;
     -webkit-transition: 1s;
@@ -277,7 +278,7 @@ header{
  
  .slider li input:checked ~ label {
     
-    background-color: rgb(97, 95, 95);
+    background-color: #F2F2F2;
  } 
 
  .slider li input:checked ~ figcaption h2{
