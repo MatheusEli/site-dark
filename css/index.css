@@ -130,9 +130,10 @@ header{
     height: 435px;
     position: relative;
 }
-.noticia-principal figcaption{
+.slider figcaption{
 
     position: absolute;
+    display: none;
     opacity: 0;
     bottom: 0;
     padding: 0 2em;
@@ -232,11 +233,6 @@ header{
     -webkit-transition: 1s;
     transition: 1s; 
     width: 100%;
- }
-
- .slider .sliderAtivo{
-
-    display: block;
  }
 
 .noticia-principal:hover .slider img,
