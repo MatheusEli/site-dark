@@ -1,11 +1,11 @@
+$("#slider li:first").fadeIn();
+$("#slider li:first figcaption").fadeIn();
+timer();
 
 $(".seta-direita").click(sliderDireita);
 $(".seta-esquerda").click(sliderEsquerda);
 var interval;
 
-$("#slider li:first").fadeIn();
-$("#slider li:first figcaption").fadeIn();
-timer();
 
 function sliderDireita(){
 
