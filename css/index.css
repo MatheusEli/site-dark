@@ -123,70 +123,14 @@ header{
     box-shadow: 0 5px 15px black;
 }
 
-.noticias{
-
-    overflow: hidden;
-    height: 435px;
-}
-
-.menu-noticias{
-
-    float: right;
-    padding: 1em;
-    font-size: .9em;
-    box-sizing: border-box;
-    margin-left: 1%; 
-    width: 29%;
-    height: inherit;
-    border-radius: 5px;
-    font-family: Verdana, Geneva, sans-serif;
-    background-color: rgba(38,12,12,.3);
-
-
-}
-
-.menu-noticias li{
-
-    padding: .65em 0;
-    background-image: linear-gradient(to right, 
-        gray, 
-        gray, 
-        gray
-    );
-    background-size: 100% 1px;
-    background-repeat: no-repeat;
-    /* trocamos "bottom center" por "top center" */
-    background-position: bottom center;
-    
-}
-
-.menu-noticias li:last-child{
-    text-align: right;
-    padding-bottom: 0;
-    background-image: none;
-}
-
-.menu-noticias li a{
-
-    color: lightgray;
-    text-decoration: none;
-    
-}
-
-.menu-noticias li a:hover, .menu-noticias li a:focus{
-
-    color: #FFF;
-    text-shadow: 0 0 .1em #FA9;
-}
-
 .noticia-principal{
 
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: 435px;
     position: relative;
 }
-.noticia-principal h2{
+.noticia-principal figcaption{
 
     position: absolute;
     opacity: 0;
@@ -200,6 +144,47 @@ header{
     text-shadow: 1px 1px 3px rgba(0, 0, 0,0.2);
     font-size: 1.7em;
 }
+
+/**
+*** Seta para ESQUERDA
+**/
+.seta-esquerda:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0; 
+    height: 0; 
+    
+    position: absolute;
+    left: 2em;
+    top: 50%;
+    z-index: 1;
+
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right: 10px solid white; 
+  }
+
+/**
+*** Seta para DIREITA
+**/
+.seta-direita:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0; 
+    height: 0; 
+
+    position: absolute;
+    right: 2em;
+    top: 50%;
+    z-index: 1;
+
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid white;
+}
+
 .box-black {
     position: absolute;
     width: 100%;
@@ -211,10 +196,13 @@ header{
     background-color: #000;
     transition: all 0.5s ease-in;
 }
+
 .slider{
 
     display: block;
-    margin: auto;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0.05%;
     width: 100%;
     height: 100%;
 }
@@ -223,39 +211,18 @@ header{
 .slider li {
     list-style: none;
     position: absolute;
+    display: none;
     width: 100%;
     height: 100%;
 }
+ 
+.slider a{
 
-.slider input{
-
-    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
-
-.slider label {
-     background-color: rgb(97, 95, 95);
-     
-     bottom: 10px;
-     cursor: pointer;
-     display: block;
-     height: 10px;
-     position: absolute;
-     width: 10px;
-     z-index: 10;
- }
-    
-.slider li:nth-child(1) label {
-     left: 10px;
- }
-
- .slider li:nth-child(2) label {
-     left: 40px;
- }
-
-
  .slider img {
-     opacity: 0;
-     visibility: hidden;
      margin: auto;
      vertical-align: bottom;
      position: relative;
@@ -264,32 +231,13 @@ header{
     -moz-transition: 1s;
     -webkit-transition: 1s;
     transition: 1s; 
-    max-width: 100%;
+    width: 100%;
  }
 
- .slider figcaption h2{
+ .slider .sliderAtivo{
 
-    visibility: hidden;
+    display: block;
  }
- .slider li input:checked ~ img {
-     opacity: 1;
-     visibility: visible;
- } 
- 
- .slider li input:checked ~ label {
-    
-    background-color: #F2F2F2;
- } 
-
- .slider li input:checked ~ figcaption h2{
-    
-        -moz-transition-delay: .3s;
-        -webkit-transition-delay: .3s;
-        transition-delay: .3s;
-
-        visibility: visible;
- } 
-
 
 .noticia-principal:hover .slider img,
 .noticia-principal:focus .slider img{   
@@ -306,8 +254,8 @@ header{
     height: 30%
 }
 
-.noticia-principal:hover .slider h2,
-.noticia-principal:focus .slider h2{
+.noticia-principal:hover .slider figcaption,
+.noticia-principal:focus .slider figcaption{
 
     opacity: 1;
     bottom: 1em;
